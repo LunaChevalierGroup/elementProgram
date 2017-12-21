@@ -22,7 +22,7 @@ public class FileManager {
 			String line;
 			int i = 0;
 			while ((line = br.readLine()) != null) {
-			System.out.println((i++ + " ") + line);
+				System.out.println((i++ + " ") + line);
 			}
 			br.close();
 			isr.close();
