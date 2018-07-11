@@ -19,6 +19,10 @@ public class PrimesJudge {
 
 	static boolean primesJudge(int i) {
 		boolean isSosu = true;
+		if(i==1){
+			isSosu=false;
+		}
+		
 		for (int j = 2; j < i; j++) {
 			if (i % j == 0) {
 				isSosu = false;
