@@ -6,18 +6,21 @@ import java.util.Scanner;
 public class Countgamemain {
 
 	public static void main(String[] args) {
-
-		Countgame countgame = new Countgame();
-		countgame.random();
-		countgame.message("入力してください");
-		while (countgame.ranum != countgame.innum) {
-			if (countgame.ranum < countgame.innum) {
-				countgame.message("はずれ、より小さな数です。もう一度入力してください");
-			} else if (countgame.ranum > countgame.innum) {
-				countgame.message("はずれ、より大きな数です。もう一度入力してください");
+		try {
+			Countgame countgame = new Countgame();
+			countgame.random();
+			countgame.message("入力してください");
+			while (countgame.ranum != countgame.innum) {
+				if (countgame.ranum < countgame.innum) {
+					countgame.message("はずれ、より小さな数です。もう一度入力してください");
+				} else if (countgame.ranum > countgame.innum) {
+					countgame.message("はずれ、より大きな数です。もう一度入力してください");
+				}
 			}
+			System.out.println("あたり");
+		} catch (Exception e) {
+			System.out.println("error");
 		}
-		System.out.println("あたり");
 	}
 
 }
@@ -33,10 +36,8 @@ class Countgame {
 	}
 
 	void message(String msg) {
-
 		System.out.println(msg);
 		System.out.print("入力値：");
 		innum = sc.nextInt();
 	}
-
 }
