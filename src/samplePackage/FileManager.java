@@ -10,22 +10,19 @@ public class FileManager {
 		try {
 			File f = new File("CSV.csv");
 			BufferedReader br = new BufferedReader(new FileReader(f));
-
+			
 			String line;
-
-			while ((line = br.readLine()) != null) {
+			for (int i = 1; (line = br.readLine()) != null; i++) {
 				String[] data = line.split(",", 0);
+				System.out.print(i);
 				for (String elem : data) {
 					System.out.print(elem);
 				}
 				System.out.println();
 			}
-
 			br.close();
-
 		} catch (IOException e) {
 			System.out.println(e);
 		}
 	}
-
 }
