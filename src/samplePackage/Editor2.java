@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Editor {
+public class Editor2 {
 	public static void main(String[] args) {
 		try {
 			File csv = new File("CSV.csv");
