@@ -13,9 +13,9 @@ public class Editor2 {
 
 			BufferedWriter bw = new BufferedWriter(new FileWriter(csv, false));
 
-			bw.write("1,a,b");
+			bw.write("a,b");
 			bw.newLine();
-			bw.write("2,c,d");
+			bw.write("c,d");
 
 			bw.close();
 
