@@ -24,7 +24,7 @@ public class FizzBuzz {
 					System.out.println(i);/** iに代入されている整数値を表示 */
 				}
 			}
-			sc.close();/**Scannerを閉じる*/
+			sc.close();/** Scannerを閉じる */
 		} catch (Exception e) {/** 例外型：Exception 変数名：e */
 			System.out.println("エラー");/** 例外が発生した時エラーという文字列を表示 */
 
