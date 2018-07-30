@@ -22,10 +22,8 @@ public enum Tramp {
 	private final int num;
 
 	Tramp(int num) {
-
 		this.num = num;
 	}
-
 
 	int getTrampNum() {
 		return num;
