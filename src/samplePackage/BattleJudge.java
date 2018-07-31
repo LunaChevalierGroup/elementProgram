@@ -1,6 +1,6 @@
 package samplePackage;
 
-public class BattleJudge extends Carddraw {
+public class BattleJudge extends CardDraw {
 
 	int dp21;
 

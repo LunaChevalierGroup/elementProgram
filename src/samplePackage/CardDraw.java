@@ -3,7 +3,7 @@ package samplePackage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Carddraw {
+public class CardDraw {
 
 	List<Tramp> tlist = new ArrayList<Tramp>();
 	List<Tramp> plist = new ArrayList<Tramp>();

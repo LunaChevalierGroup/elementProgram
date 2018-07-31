@@ -1,6 +1,9 @@
 package samplePackage;
 
 public enum Tramp {
+	/**
+	 * 列挙型のトランプ52枚作成。 渡す値としてトランプのポイントを指定
+	 */
 ハートのA(1),ハートの2(2),ハートの3(3),ハートの4(4),
 ハートの5(5),ハートの6(6),ハートの7(7),ハートの8(8),
 ハートの9(9),ハートの10(10),ハートのJ(10),ハートのQ(10),
@@ -18,13 +21,18 @@ public enum Tramp {
 クラブの9(9),クラブの10(10),クラブのJ(10),クラブのQ(10),
 クラブのK(10);
 
-
+	/** int型の変数numを宣言 */
 	private final int num;
 
-	Tramp(int num) {
-		this.num = num;
+	Tramp(int num) {/** int型のnumを引数に取るコンストラクタを定義 */
+		this.num = num;/** 引数のnumを宣言したnumに代入 */
 	}
 
+	/**
+	 * int型のnumを戻り値として返すメソッド
+	 *
+	 * @return num トランプのポイント
+	 */
 	int getTrampNum() {
 		return num;
 	}
