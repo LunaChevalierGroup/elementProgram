@@ -1,9 +1,8 @@
 package samplePackage;
 
 import java.util.Collections;/**Collectionsクラスをインポート*/
-import java.util.List;
-
 /** Listクラスをインポート */
+import java.util.List;
 
 public class TrampCreate extends CardDraw {
 	/** Tramp[]型の配列 trampにenum Trampの配列を代入 */
