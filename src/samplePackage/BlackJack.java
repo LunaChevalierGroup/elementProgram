@@ -1,7 +1,8 @@
 package samplePackage;
-
 /** Scannerクラスをインポート */
 import java.util.Scanner;
+
+import samplePackage.BattleJudge;
 
 public class BlackJack {
 
