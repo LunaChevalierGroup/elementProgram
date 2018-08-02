@@ -73,8 +73,8 @@ class Editor {
 	String line;
 	/** String型の変数lineを宣言 */
 	int i = 1;
-	/** int型の変数iを1で初期化 */
 
+	/** int型の変数iを1で初期化 */
 
 	/**
 	 * i + "," +lineをコンソールに表示し、listに追加する。iをインクリメントする
