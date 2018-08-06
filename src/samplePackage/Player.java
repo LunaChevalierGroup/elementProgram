@@ -1,5 +1,5 @@
 package samplePackage;
 
-public class Player2 {
+public class Player {
 
 }
