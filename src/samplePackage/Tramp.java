@@ -1,5 +1,5 @@
 package samplePackage;
 
-public class Tramp2 {
+public class Tramp {
 
 }
