@@ -1,5 +1,5 @@
 package samplePackage;
 
-public class BlackJack2 {
+public class BlackJack {
 
 }
