@@ -1,6 +1,7 @@
 package samplePackage;
 
-import java.util.Collections;/**Collectionsクラスをインポート*/
+/**Collectionsクラスをインポート*/
+import java.util.Collections;
 /** Listクラスをインポート */
 import java.util.List;
 
@@ -17,13 +18,17 @@ public class TrampCreate extends CardDraw {
 	 *            トランプ52枚を格納する変数
 	 */
 	void trampcreate(int i, List<Tramp> tlist) {
-		for (i = 0; i < tramp.length; i++) {/**
-											 * 変数iを0で初期化。
-											 * trampに格納されている配列の長さより小さい間
-											 * インクリメントしながら繰り返し
-											 */
-			tlist.add(tramp[i]);/** trampの配列をtlistに追加する */
+
+		/**
+		 * 変数iを0で初期化。
+		 * trampに格納されている配列の長さより小さい間
+		 * インクリメントしながら繰り返し
+		 */
+		for (i = 0; i < tramp.length; i++) {
+			/** trampの配列をtlistに追加する */
+			tlist.add(tramp[i]);
 		}
-		Collections.shuffle(tlist);/** tlistの要素をシャッフルする */
+		/** tlistの要素をシャッフルする */
+		Collections.shuffle(tlist);
 	}
 }

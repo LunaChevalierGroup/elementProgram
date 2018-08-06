@@ -24,8 +24,10 @@ public enum Tramp {
 	/** int型の変数numを宣言 */
 	private final int num;
 
-	Tramp(int num) {/** int型のnumを引数に取るコンストラクタを定義 */
-		this.num = num;/** 引数のnumを宣言したnumに代入 */
+	/** int型のnumを引数に取るコンストラクタを定義 */
+	Tramp(int num) {
+		/** 引数のnumを宣言したnumに代入 */
+		this.num = num;
 	}
 
 	/**
