@@ -9,6 +9,10 @@ public class Player {
 	private static Tramp playerdrawcard;
 	private static String name = "プレイヤー";
 
+	public String getName(){
+		return name;
+	}
+
 	public void isDraw(Tramp drawcard,List<Tramp> hand) {
 		drawcard = TrampCreate.getTrampBundle().remove(0);
 		hand.add(drawcard);
