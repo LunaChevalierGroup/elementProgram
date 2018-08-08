@@ -23,12 +23,12 @@ package samplePackage;
 
 
 	/** int型の変数numを宣言 */
-	private final int num;
+	private final int point;
 
 	/** int型のnumを引数に取るコンストラクタを定義 */
-	Tramp(int num) {
+	Tramp(int point) {
 		/** 引数のnumを宣言したnumに代入 */
-		this.num = num;
+		this.point = point;
 	}
 
 	/**
@@ -36,7 +36,7 @@ package samplePackage;
 	 *
 	 * @return num トランプのポイント
 	 */
-	int getTrampNum() {
-		return num;
+	int getTrampPoint() {
+		return point;
 	}
 }
