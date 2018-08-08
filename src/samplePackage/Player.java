@@ -7,10 +7,10 @@ public class Player {
 	private static List<Tramp> playerhand = new ArrayList<Tramp>();
 	private static int playerpoint;
 	private static Tramp playerdrawcard;
-	private static String name = "プレイヤー";
+	private static String playername = "プレイヤー";
 
 	public String getName(){
-		return name;
+		return playername;
 	}
 
 	public void isDraw(Tramp drawcard,List<Tramp> hand) {
