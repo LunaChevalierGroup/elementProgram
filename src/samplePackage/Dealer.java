@@ -3,7 +3,7 @@ package samplePackage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dealer extends Player {
+public class Dealer {
 	private List<Tramp> dealerhand = new ArrayList<Tramp>();
 	private int dealerpoint;
 	private Tramp dealer;
