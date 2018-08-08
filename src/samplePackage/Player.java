@@ -9,24 +9,24 @@ public class Player {
 	private static Tramp playerdrawcard;
 	private static String playername = "プレイヤー";
 
-	public String getName(){
+	public String getName() {
 		return playername;
 	}
 
-	public void isDraw(Tramp drawcard,List<Tramp> hand) {
+	public static void isDraw(Tramp drawcard, List<Tramp> hand) {
 		drawcard = TrampCreate.getTrampBundle().remove(0);
 		hand.add(drawcard);
 	}
 
-	public void isPoint(int point,List<Tramp> hand) {
+	public static void isPoint(int point, List<Tramp> hand) {
 		point += hand.remove(0).getTrampPoint();
 	}
 
-	public void drawMessage(String humanname, Tramp trampname) {
+	public static void drawMessage(String humanname, Tramp trampname) {
 		System.out.println(humanname + "は" + trampname + "を引きました");
 	}
 
-	public void pointMessage(String humanname, int point) {
+	public static void pointMessage(String humanname, int point) {
 		System.out.println(humanname + "のポイントは" + point + "です。");
 	}
 
