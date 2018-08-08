@@ -10,7 +10,7 @@ public class Dealer extends Player {
 	private String dealername = "ディーラー";
 
 	public void dealerSecondMessage() {
-		System.out.println("2枚目" + name + "が引いたカードは非表示です。");
+		System.out.println("2枚目" + dealername + "が引いたカードは非表示です。");
 	}
 
 	public void dealerDraw() {
