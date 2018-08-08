@@ -26,7 +26,7 @@ public class Player {
 		System.out.println(humanname + "は" + trampname + "を引きました");
 	}
 
-	public void pointMessege(String humanname, int point) {
+	public void pointMessage(String humanname, int point) {
 		System.out.println(humanname + "のポイントは" + point + "です。");
 	}
 
