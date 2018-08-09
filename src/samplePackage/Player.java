@@ -7,27 +7,34 @@ public class Player {
 	private static List<Tramp> playerhand = new ArrayList<Tramp>();
 	private static int playerpoint;
 	private static Tramp playerdrawcard;
-	private static String playername = "プレイヤー";
+	private final static String playername = "プレイヤー";
 
-	public String getName() {
+	public void setPlayerHand(List<Tramp> playerhand) {
+		Player.playerhand =playerhand;
+	}
+
+	public static void setPlayerPoint(int playerpoint) {
+		Player.playerpoint = playerpoint;
+	}
+
+	public void setPlayerDrawCard(Tramp playerdrawcard) {
+		Player.playerdrawcard = playerdrawcard;
+	}
+
+	public static List<Tramp> getPlayerHand() {
+		return playerhand;
+	}
+
+	public static int getPlayerPoint() {
+		return playerpoint;
+	}
+
+	public static Tramp getPlayerDrawCard() {
+		return playerdrawcard;
+	}
+
+	public static String getPlayerName() {
 		return playername;
-	}
-
-	public static void isDraw(Tramp drawcard, List<Tramp> hand) {
-		drawcard = TrampCreate.getTrampBundle().remove(0);
-		hand.add(drawcard);
-	}
-
-	public static void isPoint(int point, List<Tramp> hand) {
-		point += hand.remove(0).getTrampPoint();
-	}
-
-	public static void drawMessage(String humanname, Tramp trampname) {
-		System.out.println(humanname + "は" + trampname + "を引きました");
-	}
-
-	public static void pointMessage(String humanname, int point) {
-		System.out.println(humanname + "のポイントは" + point + "です。");
 	}
 
 }
