@@ -9,11 +9,11 @@ public class TrampCreate {
 	private static Tramp[] tramp = Tramp.values();
 
 	public void setTrampBundle(List<Tramp> trampbundle) {
-		this.trampbundle = trampbundle;
+		TrampCreate.trampbundle = trampbundle;
 	}
 
 	public void setTramp(Tramp[] tramp) {
-		this.tramp = tramp;
+		TrampCreate.tramp = tramp;
 	}
 
 	public static List<Tramp> getTrampBundle() {
@@ -33,4 +33,5 @@ public class TrampCreate {
 	public static void trampShuffle() {
 		Collections.shuffle(trampbundle);
 	}
+
 }
