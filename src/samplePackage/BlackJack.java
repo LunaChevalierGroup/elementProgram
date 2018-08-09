@@ -35,14 +35,15 @@ public class BlackJack {
 
 		System.out.println("カードを引きますか？（はい：yを入力、いいえ：それ以外を入力）");/** 文字列の表示 */
 
-		a: {/** break文のラベルを設定 ラベル名:a */
+		/** break文のラベルを設定 ラベル名:a */
 			while (sc.next().equals("y")) {/** 入力値が"y"と同じ間繰り返す */
 
 				tc.pdraw();/** pdrawメソッドの呼び出し */
 
 				if (tc.pp > 21) {/** プレイヤーのポイントが21を超えている場合に実行 */
 					System.out.println("バースト（プレイヤーの負け）");/** 文字列の表示 */
-					break a;/** ラベルaを抜ける */
+//					break a;/** ラベルaを抜ける */
+					System.exit(0);
 				}
 
 				System.out.println("カードを引きますか？（はい：yを入力、いいえ：それ以外を入力）");/** 文字列の表示 */
@@ -58,7 +59,7 @@ public class BlackJack {
 
 			bj.dpjudge(tc.dp);/** dpjudgeメソッドを呼び出し、引数としてディーラーのポイントを渡す */
 			bj.battlejudge(tc.pp);/** battlejudgeメソッドを呼び出し、引数としてプレイヤーのポイントを渡す */
-		}
+
 		sc.close();/** closeメソッドの呼び出し */
 	}
 }
