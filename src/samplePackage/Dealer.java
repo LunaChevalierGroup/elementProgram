@@ -3,33 +3,29 @@ package samplePackage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dealer {
-	private static List<Tramp> dealerhand = new ArrayList<Tramp>();
-	private static int dealerpoint;
-	private static Tramp dealerdrawcard;
-	private final static String dealername = "ディーラー";
+public class Dealer extends BlackJack {
+	private  List<Tramp> dealerhand = new ArrayList<Tramp>();
+	private  int dealerpoint;
+	private  Tramp dealerdrawcard;
+	private final  String dealername = "ディーラー";
 
-	public static void setDealerHand(List<Tramp> dealerhand) {
-		Dealer.dealerhand = dealerhand;
+	public void setDealerHand(List<Tramp> dealerhand) {
+		this.dealerhand = dealerhand;
 	}
 
-	public static void setDealerPoint(int dealerpoint) {
-		Dealer.dealerpoint = dealerpoint;
+	public void setDealerPoint(int dealerpoint) {
+		this.dealerpoint = dealerpoint;
 	}
 
-	public void setDealerDrawCrad(Tramp dealerdrawcard) {
-		Dealer.dealerdrawcard = dealerdrawcard;
+	public void setDealerDrawCard(Tramp dealerdrawcard) {
+		this.dealerdrawcard = dealerdrawcard;
 	}
 
-	public static void dealerSecondMessage() {
-		System.out.println("2枚目" + dealername + "が引いたカードは非表示です。");
-	}
-
-	public static List<Tramp> getDealerhand() {
+	public  List<Tramp> getDealerHand() {
 		return dealerhand;
 	}
 
-	public static int getDealerPoint() {
+	public int getDealerPoint() {
 		return dealerpoint;
 	}
 
@@ -41,12 +37,17 @@ public class Dealer {
 		return dealername;
 	}
 
+	public void dealerSecondMessage() {
+		System.out.println("2枚目" + dealername + "が引いたカードは非表示です。");
+	}
+
 	public void dealerDraw() {
 		while (dealerpoint < 17) {
-			BlackJack.isDraw(dealerdrawcard, dealerhand);
-			BlackJack.isPoint(dealerpoint, dealerhand);
-			BlackJack.drawMessage(dealername, dealerdrawcard);
-			BlackJack.pointMessage(dealername, dealerpoint);
+			setDealerDrawCard(isDraw(dealerdrawcard, dealerhand));
+			setDealerPoint(isPoint(dealerpoint, dealerhand));
+			lineShow();
+			drawMessage(dealername, dealerdrawcard);
+			pointMessage(dealername, dealerpoint);
 		}
 	}
 }
