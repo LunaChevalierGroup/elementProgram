@@ -22,21 +22,21 @@ package samplePackage;
 	 クラブのK(10);
 
 
-	/** int型の変数numを宣言 */
+	/** int型の変数pointを宣言 */
 	private final int point;
 
-	/** int型のnumを引数に取るコンストラクタを定義 */
-	Tramp(int point) {
-		/** 引数のnumを宣言したnumに代入 */
+	/** int型のpointを引数に取るコンストラクタを定義 */
+	private Tramp(int point) {
+		/** 引数のpointを宣言したpointに代入 */
 		this.point = point;
 	}
 
 	/**
-	 * int型のnumを戻り値として返すメソッド
+	 * int型のpointを戻り値として返すメソッド
 	 *
-	 * @return num トランプのポイント
+	 * @return point トランプのポイント
 	 */
-	int getTrampPoint() {
+	public int getTrampPoint() {
 		return point;
 	}
 }
