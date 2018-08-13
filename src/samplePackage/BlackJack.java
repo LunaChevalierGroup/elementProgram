@@ -23,10 +23,10 @@ public class BlackJack extends TrampCreate {
 		System.out.println(humanname + "のポイントは" + point + "です。");
 	}
 
-	public void isBurst(int point,String humanname) {
+	public void isBurst(int point, String humanname) {
 		if (point > 21) {
 			lineShow();
-			System.out.println(humanname+"がバースト");
+			System.out.println(humanname + "がバースト");
 			System.exit(0);
 		}
 	}

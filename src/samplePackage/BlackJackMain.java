@@ -1,11 +1,14 @@
 package samplePackage;
 
+import java.util.Scanner;
+
 public class BlackJackMain {
 
 	public static void main(String[] args) {
+		BlackJack blackjack = new BlackJack();
 		Player player = new Player();
 		Dealer dealer = new Dealer();
-		BlackJack blackjack = new BlackJack();
+
 		player.setPlayerPoint(0);
 		dealer.setDealerPoint(0);
 
@@ -13,29 +16,48 @@ public class BlackJackMain {
 		blackjack.trampShuffle();
 
 		for (int i = 1; i <= 2; i++) {
-			player.setPlayerDrawCard(player.isDraw(player.getPlayerDrawCard(), player.getPlayerHand()));
-			player.setPlayerPoint(player.isPoint(player.getPlayerPoint(), player.getPlayerHand()));
-			player.drawMessage(player.getPlayerName(), player.getPlayerDrawCard());
-			player.pointMessage(player.getPlayerName(), player.getPlayerPoint());
-			player.lineShow();
+			player.setPlayerDrawCard(blackjack.isDraw(player.getPlayerDrawCard(), player.getPlayerHand()));
+			player.setPlayerPoint(blackjack.isPoint(player.getPlayerPoint(), player.getPlayerHand()));
+			blackjack.drawMessage(player.getPlayerName(), player.getPlayerDrawCard());
+			blackjack.pointMessage(player.getPlayerName(), player.getPlayerPoint());
+			blackjack.lineShow();
 		}
 
-		dealer.setDealerDrawCard(dealer.isDraw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
-		dealer.setDealerPoint(dealer.isPoint(dealer.getDealerPoint(), dealer.getDealerHand()));
-		dealer.drawMessage(dealer.getDealerName(), dealer.getDealerDrawCard());
-		dealer.pointMessage(dealer.getDealerName(), dealer.getDealerPoint());
-		dealer.lineShow();
+		dealer.setDealerDrawCard(blackjack.isDraw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
+		dealer.setDealerPoint(blackjack.isPoint(dealer.getDealerPoint(), dealer.getDealerHand()));
+		blackjack.drawMessage(dealer.getDealerName(), dealer.getDealerDrawCard());
+		blackjack.pointMessage(dealer.getDealerName(), dealer.getDealerPoint());
+		blackjack.lineShow();
 
-		dealer.setDealerDrawCard(dealer.isDraw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
-		dealer.setDealerPoint(dealer.isPoint(dealer.getDealerPoint(), dealer.getDealerHand()));
+		dealer.setDealerDrawCard(blackjack.isDraw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
+		dealer.setDealerPoint(blackjack.isPoint(dealer.getDealerPoint(), dealer.getDealerHand()));
 		dealer.dealerSecondMessage();
-		dealer.lineShow();
+		blackjack.lineShow();
 
 		player.isDrawSelectMessage();
-		player.isDrawRepeat();
+		Scanner sc = new Scanner(System.in);
+		while (sc.next().equals("y")) {
+			player.setPlayerDrawCard(blackjack.isDraw(player.getPlayerDrawCard(), player.getPlayerHand()));
+			player.setPlayerPoint(blackjack.isPoint(player.getPlayerPoint(), player.getPlayerHand()));
+			blackjack.drawMessage(player.getPlayerName(), player.getPlayerDrawCard());
+			blackjack.pointMessage(player.getPlayerName(), player.getPlayerPoint());
+			blackjack.isBurst(player.getPlayerPoint(), player.getPlayerName());
+			blackjack.lineShow();
+			player.isDrawSelectMessage();
+		}
+		sc.close();
+		// dealer.isDrawRepeat();
 
-		dealer.dealerDraw();
-		dealer.isBurst(player.getPlayerPoint(), dealer.getDealerName());
+		while (dealer.getDealerPoint() < 17) {
+			blackjack.lineShow();
+			dealer.setDealerDrawCard(blackjack.isDraw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
+			dealer.setDealerPoint(blackjack.isPoint(dealer.getDealerPoint(), dealer.getDealerHand()));
+			blackjack.drawMessage(dealer.getDealerName(), dealer.getDealerDrawCard());
+			blackjack.pointMessage(dealer.getDealerName(), dealer.getDealerPoint());
+
+		}
+		// dealer.dealerDraw();
+		blackjack.isBurst(dealer.getDealerPoint(), dealer.getDealerName());
 
 		blackjack.pointShow(player.getPlayerPoint(), dealer.getDealerPoint());
 		blackjack.battleJudge(player.getPlayerPoint(), dealer.getDealerPoint());
