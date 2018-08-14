@@ -1,5 +1,10 @@
 package samplePackage;
 
+/**
+ * トランプの列挙型クラス
+ *
+ * @author dfjkyrcq
+ */
 	public enum Tramp {
 	/**
 	 * 列挙型のトランプ52枚作成。 渡す値としてトランプのポイントを指定
@@ -22,12 +27,16 @@ package samplePackage;
 	 クラブのK(10);
 
 
-	/** int型の変数pointを宣言 */
+	/** トランプのpointを宣言 */
 	private final int point;
 
-	/** int型のpointを引数に取るコンストラクタを定義 */
+	/**
+	 * int型のpointを引数に取るコンストラクタを定義
+	 *
+	 * @param point
+	 *            トランプのポイント
+	 */
 	private Tramp(int point) {
-		/** 引数のpointを宣言したpointに代入 */
 		this.point = point;
 	}
 
