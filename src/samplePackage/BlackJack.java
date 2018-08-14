@@ -1,53 +1,139 @@
 package samplePackage;
 
+/**Listクラスのインポート*/
 import java.util.List;
 
+/**
+ * ブラックジャックゲームのクラス
+ *
+ * @author dfjkyrcq
+ */
 public class BlackJack extends TrampCreate {
-
+	/**
+	 * トランプの束からトランプを引くメソッド
+	 *
+	 * @author dfjkyrcq
+	 * @param drawcard
+	 *            引いたカードを代入する変数
+	 * @param hand
+	 *            引いたカードを格納するList<Tramp>型の変数
+	 * @return drawcard
+	 */
 	public Tramp isDraw(Tramp drawcard, List<Tramp> hand) {
+		/** トランプの束からトランプを取得し、Listから削除。取得したトランプを変数drawcardに代入 */
 		drawcard = getTrampBundle().remove(0);
+		/** drawcardをList<Tramp>型のhandに追加する */
 		hand.add(drawcard);
 		return drawcard;
 	}
 
+	/**
+	 * 引いたトランプのポイントを変数pointに代入する。
+	 *
+	 * @author dfjkyrcq
+	 * @param point
+	 *            引いたトランプのポイントを代入する変数
+	 * @param hand
+	 *            引いたカードを格納するList<Tramp>型の変数
+	 * @return point
+	 */
 	public int isPoint(int point, List<Tramp> hand) {
+		/** List<Tramp>型のhandから0番目の情報を取得し削除。トランプのポイントを取得し変数pointに代入 */
 		point += hand.remove(0).getTrampPoint();
 		return point;
 	}
 
+	/**
+	 * 引いた人と引いたカード名を表示する
+	 *
+	 * @author dfjkyrcq
+	 * @param humanname
+	 *            トランプを引いた人の名前
+	 * @param drawcard
+	 *            引いたカード
+	 */
 	public void drawMessage(String humanname, Tramp drawcard) {
+		/** 文字列の表示 */
 		System.out.println(humanname + "は" + drawcard + "を引きました");
 	}
 
+	/**
+	 * 引いた人と引いたカードの合計ポイントを表示する
+	 *
+	 * @author dfjkyrcq
+	 * @param humanname
+	 *            トランプを引いた人の名前
+	 * @param point
+	 *            合計ポイント
+	 */
 	public void pointMessage(String humanname, int point) {
+		/** 文字列の表示 */
 		System.out.println(humanname + "のポイントは" + point + "です。");
 	}
 
+	/**
+	 * バーストの判定を行うメソッド
+	 *
+	 * @author dfjkyrcq
+	 * @param point
+	 *            引いたトランプの合計ポイント
+	 * @param humanname
+	 *            人の名前
+	 */
 	public void isBurst(int point, String humanname) {
+		/** pointが21を超えているなら */
 		if (point > 21) {
+			/** 点線の表示 */
 			lineShow();
+			/** 文字列の表示 */
 			System.out.println(humanname + "がバースト");
+			/** プログラムを終了する */
 			System.exit(0);
 		}
 	}
 
+	/**
+	 * プレイヤー、ディーラーの合計ポイントを表示するメソッド
+	 *
+	 * @author dfjkyrcq
+	 * @param playerpoint
+	 *            プレイヤーの合計ポイント
+	 * @param dealerpoint
+	 *            ディーラーの合計ポイント
+	 */
 	public void pointShow(int playerpoint, int dealerpoint) {
+		/** 点線を表示する */
 		lineShow();
+		/** 文字列の表示 */
 		System.out.println("プレイヤーのポイントは" + playerpoint + "です。");
+		/** 文字列の表示 */
 		System.out.println("ディーラーのポイントは" + dealerpoint + "です。");
 	}
 
+	/**
+	 * 勝敗判定メソッド
+	 *
+	 * @author dfjkyrcq
+	 * @param playerpoint
+	 *            プレイヤーの合計ポイント
+	 * @param dealerpoint
+	 *            ディーラーの合計ポイント
+	 */
 	public void battleJudge(int playerpoint, int dealerpoint) {
-
+		/** プレイヤーのポイントがディーラーのポイント以上なら */
 		if (playerpoint >= dealerpoint) {
+			/** 文字列の表示 */
 			System.out.println("プレイヤーの勝ち");
 		} else {
+			/** 文字列の表示 */
 			System.out.println("プレイヤーの負け");
 		}
 
 	}
 
+	/** コンソール上で見やすいように仕切りをするための点線を表示する */
 	public void lineShow() {
+		/** 点線の表示 */
 		System.out.println("------------------------------------------------");
 	}
 }
