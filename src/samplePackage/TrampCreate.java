@@ -48,7 +48,7 @@ public class TrampCreate {
 	 *
 	 * @author dfjkyrcq
 	 *
-	 * @return trampbundle
+	 * @return トランプの束
 	 */
 	public List<Tramp> getTrampBundle() {
 		return trampbundle;
@@ -59,7 +59,7 @@ public class TrampCreate {
 	 *
 	 * @author dfjkyrcq
 	 *
-	 * @return tramp
+	 * @return トランプの配列
 	 */
 	public Tramp[] getTramp() {
 		return tramp;

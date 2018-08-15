@@ -43,7 +43,7 @@ package samplePackage;
 	/**
 	 * int型のpointを戻り値として返すメソッド
 	 *
-	 * @return point トランプのポイント
+	 * @return トランプのポイント
 	 */
 	public int getTrampPoint() {
 		return point;
