@@ -17,7 +17,7 @@ public class BlackJack extends TrampCreate {
 	 *            引いたカードを代入する変数
 	 * @param hand
 	 *            引いたカードを格納するList<Tramp>型の変数
-	 * @return drawcard
+	 * @return 引いたカード
 	 */
 	public Tramp isDraw(Tramp drawcard, List<Tramp> hand) {
 		/** トランプの束からトランプを取得し、Listから削除。取得したトランプを変数drawcardに代入 */
@@ -35,7 +35,7 @@ public class BlackJack extends TrampCreate {
 	 *            引いたトランプのポイントを代入する変数
 	 * @param hand
 	 *            引いたカードを格納するList<Tramp>型の変数
-	 * @return point
+	 * @return ポイント
 	 */
 	public int isPoint(int point, List<Tramp> hand) {
 		/** List<Tramp>型のhandから0番目の情報を取得し削除。トランプのポイントを取得し変数pointに代入 */
