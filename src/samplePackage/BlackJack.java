@@ -19,7 +19,7 @@ public class BlackJack extends TrampCreate {
 	 *            引いたカードを格納するList<Tramp>型の変数
 	 * @return 引いたカード
 	 */
-	public Tramp isDraw(Tramp drawcard, List<Tramp> hand) {
+	public Tramp Draw(Tramp drawcard, List<Tramp> hand) {
 		/** トランプの束からトランプを取得し、Listから削除。取得したトランプを変数drawcardに代入 */
 		drawcard = getTrampBundle().remove(0);
 		/** drawcardをList<Tramp>型のhandに追加する */
@@ -37,7 +37,7 @@ public class BlackJack extends TrampCreate {
 	 *            引いたカードを格納するList<Tramp>型の変数
 	 * @return ポイント
 	 */
-	public int isPoint(int point, List<Tramp> hand) {
+	public int Point(int point, List<Tramp> hand) {
 		/** List<Tramp>型のhandから0番目の情報を取得し削除。トランプのポイントを取得し変数pointに代入 */
 		point += hand.remove(0).getTrampPoint();
 		return point;
@@ -80,7 +80,7 @@ public class BlackJack extends TrampCreate {
 	 * @param humanname
 	 *            人の名前
 	 */
-	public void isBurst(int point, String humanname) {
+	public void Burst(int point, String humanname) {
 		/** pointが21を超えているなら */
 		if (point > 21) {
 			/** 点線の表示 */
