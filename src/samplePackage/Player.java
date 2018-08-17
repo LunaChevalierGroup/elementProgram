@@ -94,19 +94,19 @@ public class Player {
 	}
 
 	/**トランプを引くか選択の為のメッセージを表示*/
-	public void isDrawSelectMessage() {
+	public void DrawSelectMessage() {
 		/**文字列の表示*/
 		System.out.println("カードを引きますか？(はい：yを入力、いいえ：それ以外を入力)");
 	}
 
-	// public void isDrawRepeat() {
+	// public void DrawRepeat() {
 	// Scanner sc = new Scanner(System.in);
 	// while (sc.next().equals("y")) {
-	// setPlayerDrawCard(isDraw(playerdrawcard, playerhand));
-	// setPlayerPoint(isPoint(playerpoint, playerhand));
+	// setPlayerDrawCard(Draw(playerdrawcard, playerhand));
+	// setPlayerPoint(Point(playerpoint, playerhand));
 	// drawMessage(playername, playerdrawcard);
 	// pointMessage(playername, playerpoint);
-	// isBurst(playerpoint,playername);
+	// Burst(playerpoint,playername);
 	// lineShow();
 	// isDrawSelectMessage();
 	// }
