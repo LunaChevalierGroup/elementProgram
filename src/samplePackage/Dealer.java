@@ -1,6 +1,8 @@
 package samplePackage;
 
+//ArrayListクラスのインポート
 import java.util.ArrayList;
+//Listクラスのインポート
 import java.util.List;
 
 /**
@@ -9,15 +11,16 @@ import java.util.List;
  * @author dfjkyrcq
  */
 public class Dealer {
-	/** List<Tramp>型の変数dealerhandにArrayList<Tramp>クラスのインスタンスを生成 */
+	// List<Tramp>型の変数dealerhandにArrayList<Tramp>クラスのインスタンスを生成
 	private List<Tramp> dealerhand = new ArrayList<Tramp>();
-	/** ディーラーのポイントを代入する変数 */
+	// ディーラーのポイントを代入する変数
 	private int dealerpoint;
-	/** ディーラーの引いたカードを代入する変数 */
+	// ディーラーの引いたカードを代入する変数
 	private Tramp dealerdrawcard;
-	/** dealernameをディーラーで初期化 */
-	private final String dealername = "ディーラー";
-
+	// dealernameをディーラーで初期化
+	private final String dealername = "Dealer";
+	// dealerhiddenをディーラーで初期化
+	private final String dealerhidden = "Hidden";
 	/**
 	 * dealerhandのセッタ
 	 *
@@ -96,6 +99,17 @@ public class Dealer {
 	}
 
 	/**
+	 * dealernameのゲッタ
+	 *
+	 * @author dfjkyrcq
+	 * @return ディーラーの名前
+	 *
+	 */
+	public String getDealerHidden() {
+		return dealerhidden;
+	}
+
+	/**
 	 * ディーラーが2枚目のカードを引いた時に表示する文字列
 	 *
 	 * @author dfjkyrcq
@@ -103,17 +117,8 @@ public class Dealer {
 	 *
 	 */
 	public void dealerSecondMessage() {
-		/** 文字列を表示 */
+		// 文字列を表示
 		System.out.println("2枚目" + dealername + "が引いたカードは非表示です。");
 	}
 
-	// public void dealerDraw() {
-	// while (dealerpoint < 17) {
-	// setDealerDrawCard(isDraw(dealerdrawcard, dealerhand));
-	// setDealerPoint(isPoint(dealerpoint, dealerhand));
-	// lineShow();
-	// drawMessage(dealername, dealerdrawcard);
-	// pointMessage(dealername, dealerpoint);
-	// }
-	// }
 }
