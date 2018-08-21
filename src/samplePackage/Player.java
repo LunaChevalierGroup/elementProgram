@@ -1,8 +1,8 @@
 package samplePackage;
 
-/**ArrayListクラスをインポート*/
+//ArrayListクラスをインポート
 import java.util.ArrayList;
-/**Listクラスをインポート*/
+//Listクラスをインポート
 import java.util.List;
 
 /**
@@ -11,14 +11,14 @@ import java.util.List;
  * @author dfjkyrcq
  */
 public class Player {
-	/** List<Tramp>型の変数playerhandにArrayListクラスのインスタンスを生成 */
+	// List<Tramp>型の変数playerhandにArrayListクラスのインスタンスを生成
 	private List<Tramp> playerhand = new ArrayList<Tramp>();
-	/** プレイヤーのポイントを代入する変数 */
+	// プレイヤーのポイントを代入する変数
 	private int playerpoint;
-	/** プレイヤーの引いたカードを代入する変数 */
+	// プレイヤーの引いたカードを代入する変数
 	private Tramp playerdrawcard;
-	/** playernameをプレイヤーで初期化 */
-	private final String playername = "プレイヤー";
+	// playernameをプレイヤーで初期化
+	private final String playername = "Player";
 
 	/**
 	 * playerhandのセッタ
@@ -93,24 +93,10 @@ public class Player {
 		return playername;
 	}
 
-	/**トランプを引くか選択の為のメッセージを表示*/
+	// トランプを引くか選択の為のメッセージを表示
 	public void DrawSelectMessage() {
-		/**文字列の表示*/
+		// 文字列の表示
 		System.out.println("カードを引きますか？(はい：yを入力、いいえ：それ以外を入力)");
 	}
-
-	// public void DrawRepeat() {
-	// Scanner sc = new Scanner(System.in);
-	// while (sc.next().equals("y")) {
-	// setPlayerDrawCard(Draw(playerdrawcard, playerhand));
-	// setPlayerPoint(Point(playerpoint, playerhand));
-	// drawMessage(playername, playerdrawcard);
-	// pointMessage(playername, playerpoint);
-	// Burst(playerpoint,playername);
-	// lineShow();
-	// isDrawSelectMessage();
-	// }
-	// sc.close();
-	// }
 
 }
