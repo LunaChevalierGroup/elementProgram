@@ -1,51 +1,37 @@
 package samplePackage;
 
 /**
- * トランプの列挙型クラス
+ * トランプを作成するクラス
  *
  * @author dfjkyrcq
+ *
  */
-	public enum Tramp {
-	/**
-	 * 列挙型のトランプ52枚作成。 渡す値としてトランプのポイントを指定
-	 */
-     ハートのA(1),ハートの2(2),ハートの3(3),ハートの4(4),
-     ハートの5(5),ハートの6(6),ハートの7(7),ハートの8(8),
-     ハートの9(9),ハートの10(10),ハートのJ(10),ハートのQ(10),
-     ハートのK(10),
-     ダイヤのA(1),ダイヤの2(2),ダイヤの3(3),ダイヤの4(4),
-     ダイヤの5(5),ダイヤの6(6),ダイヤの7(7),ダイヤの8(8),
-	 ダイヤの9(9),ダイヤの10(10),ダイヤのJ(10),ダイヤのQ(10),
-	 ダイヤのK(10),
-	 スペードのA(1),スペードの2(2),スペードの3(3),スペードの4(4),
-	 スペードの5(5),スペードの6(6),スペードの7(7),スペードの8(8),
-	 スペードの9(9),スペードの10(10),スペードのJ(10),スペードのQ(10),
-	 スペードのK(10),
-	 クラブのA(1),クラブの2(2),クラブの3(3),クラブの4(4),
-	 クラブの5(5),クラブの6(6),クラブの7(7),クラブの8(8),
-	 クラブの9(9),クラブの10(10),クラブのJ(10),クラブのQ(10),
-	 クラブのK(10);
+public class Tramp {
 
+	private TrampPoint tramppoint;
+	private TrampMark trampmark;
 
-	/** トランプのpointを宣言 */
-	private final int point;
-
-	/**
-	 * int型のpointを引数に取るコンストラクタを定義
-	 *
-	 * @param point
-	 *            トランプのポイント
-	 */
-	private Tramp(int point) {
-		this.point = point;
+	public Tramp(TrampPoint tramppoint, TrampMark trampmark) {
+		this.tramppoint = tramppoint;
+		this.trampmark = trampmark;
 	}
 
 	/**
-	 * int型のpointを戻り値として返すメソッド
 	 *
-	 * @return トランプのポイント
+	 *
+	 * @author dfjkyrcq
+	 *
+	 * @return トランプ
 	 */
 	public int getTrampPoint() {
-		return point;
+		return tramppoint.getTrampPoint();
+	}
+
+	public String getTrampNumber() {
+		return tramppoint.getTrampNumber();
+	}
+
+	public String getTrampMark() {
+		return trampmark.getTrampMark();
 	}
 }
