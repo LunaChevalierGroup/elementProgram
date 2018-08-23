@@ -17,7 +17,7 @@ public class Player {
 	private int playerpoint;
 	// プレイヤーの引いたカードを代入する変数
 	private Tramp playerdrawcard;
-	// playernameをプレイヤーで初期化
+	// playernameをPlayerで初期化
 	private final String playername = "Player";
 
 	/**
@@ -46,7 +46,7 @@ public class Player {
 	 * playerdrawcardのセッタ
 	 *
 	 * @author dfjkyrcq
-	 * @param plyerdrawcard
+	 * @param playerdrawcard
 	 *            プレイヤーの引いたカード
 	 */
 	public void setPlayerDrawCard(Tramp playerdrawcard) {
