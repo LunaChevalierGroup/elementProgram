@@ -17,9 +17,9 @@ public class Dealer {
 	private int dealerpoint;
 	// ディーラーの引いたカードを代入する変数
 	private Tramp dealerdrawcard;
-	// dealernameをディーラーで初期化
+	// dealernameをDealerで初期化
 	private final String dealername = "Dealer";
-	// dealerhiddenをディーラーで初期化
+	// dealerhiddenをHiddenで初期化
 	private final String dealerhidden = "Hidden";
 	/**
 	 * dealerhandのセッタ
@@ -99,10 +99,10 @@ public class Dealer {
 	}
 
 	/**
-	 * dealernameのゲッタ
+	 * dealerhiddenのゲッタ
 	 *
 	 * @author dfjkyrcq
-	 * @return ディーラーの名前
+	 * @return Hidden
 	 *
 	 */
 	public String getDealerHidden() {
