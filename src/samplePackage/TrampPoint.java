@@ -1,12 +1,12 @@
 package samplePackage;
 
 /**
- * トランプの列挙型クラス
+ * トランプのポイントの列挙型クラス
  *
  * @author dfjkyrcq
  */
 	public enum TrampPoint {
-
+	/** トランプのポイントと文字を列挙 */
      one(1,"A"),
      two(2,"2"),
      three(3,"3"),
@@ -23,13 +23,17 @@ package samplePackage;
 
 	// トランプのpointを宣言
 	private final int point;
+	// トランプの英数字を宣言
 	private final String numbermark;
 
 	/**
 	 * int型のpointを引数に取るコンストラクタを定義
 	 *
+	 * @author dfjkyrcq
 	 * @param point
 	 *            トランプのポイント
+	 * @param numbermark
+	 *            トランプの英数字
 	 */
 	private TrampPoint(int point, String numbermark) {
 		this.point = point;
@@ -39,6 +43,7 @@ package samplePackage;
 	/**
 	 * int型のpointを戻り値として返すメソッド
 	 *
+	 * @author dfjkyrcq
 	 * @return トランプのポイント
 	 */
 	public int getTrampPoint() {
@@ -46,11 +51,12 @@ package samplePackage;
 	}
 
 	/**
-	 * int型のpointを戻り値として返すメソッド
+	 * String型のnumbermarkを戻り値として返すメソッド
 	 *
-	 * @return トランプのポイント
+	 * @author dfjkyrcq
+	 * @return トランプの英数字
 	 */
-	public String getTrampNumber() {
+	public String getTrampNumberMark() {
 		return numbermark;
 	}
 }

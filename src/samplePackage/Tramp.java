@@ -17,18 +17,18 @@ public class Tramp {
 	}
 
 	/**
-	 *
+	 * トランプのポイントを返すメソッド
 	 *
 	 * @author dfjkyrcq
 	 *
-	 * @return トランプ
+	 * @return トランプのポイント
 	 */
 	public int getTrampPoint() {
 		return tramppoint.getTrampPoint();
 	}
 
-	public String getTrampNumber() {
-		return tramppoint.getTrampNumber();
+	public String getTrampNumberMark() {
+		return tramppoint.getTrampNumberMark();
 	}
 
 	public String getTrampMark() {

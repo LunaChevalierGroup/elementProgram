@@ -1,28 +1,37 @@
 package samplePackage;
 
-public enum TrampMark {
 
+/**
+ * トランプのマークの列挙型クラス
+ *
+ * @author dfjkyrcq
+ */
+public enum TrampMark {
+	/** トランプのマークを列挙 */
 	heart("HERAT"),
 	dia("DIA"),
 	spade("SPADE"),
 	club("CLUB");
 
+	// String型の変数trampmarkを宣言
 	private final String trampmark;
 
 	/**
-	 * int型のpointを引数に取るコンストラクタを定義
+	 * String型のtrampmarkを引数に取るコンストラクタを定義
 	 *
-	 * @param point
-	 *            トランプのポイント
+	 * @author dfjkyrcq
+	 * @param trampmark
+	 *            トランプのマーク
 	 */
 	private TrampMark(String trampmark) {
 		this.trampmark = trampmark;
 	}
 
 	/**
-	 * int型のpointを戻り値として返すメソッド
+	 * trampmarkのゲッタ
 	 *
-	 * @return トランプのポイント
+	 * @author dfjkyrcq
+	 * @return トランプのマーク
 	 */
 	public String getTrampMark() {
 		return trampmark;
