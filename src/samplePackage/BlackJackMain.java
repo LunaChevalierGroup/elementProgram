@@ -31,12 +31,12 @@ public class BlackJackMain {
 		blackjack.trampShuffle();
 
 
-		// iを1で初期化しiをインクリメントしながらiが2以下の間初期化
+		// iを1で初期化しiをインクリメントしながらiが2以下の間繰り返す
 		for (int i = 1; i <= 2; i++) {
-			// isDrawメソッドを実行し、戻り値をplayerdrawcardにセットする。
-			player.setPlayerDrawCard(blackjack.Draw(player.getPlayerDrawCard(), player.getPlayerHand()));
-			// isPointメソッドを実行し、戻り値をplayerpointにセットする。
-			player.setPlayerPoint(blackjack.Point(player.getPlayerPoint(), player.getPlayerHand()));
+			// drawメソッドを実行し、戻り値をplayerdrawcardにセットする。
+			player.setPlayerDrawCard(blackjack.draw(player.getPlayerDrawCard(), player.getPlayerHand()));
+			// pointメソッドを実行し、戻り値をplayerpointにセットする。
+			player.setPlayerPoint(blackjack.point(player.getPlayerPoint(), player.getPlayerHand()));
 			// プレイヤーが引いたカードのメッセージを表示する
 			blackjack.drawMessage(player.getPlayerName(), player.getPlayerDrawCard());
 			// プレイヤーが引いたカードの合計ポイントのメッセージを表示する
@@ -46,10 +46,10 @@ public class BlackJackMain {
 		}
 
 
-		// isDrawメソッドを実行し、戻り値をdealerdrawcardにセットする。
-		dealer.setDealerDrawCard(blackjack.Draw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
-		// isPointメソッドを実行し、戻り値をdealerpointにセットする。
-		dealer.setDealerPoint(blackjack.Point(dealer.getDealerPoint(), dealer.getDealerHand()));
+		// drawメソッドを実行し、戻り値をdealerdrawcardにセットする。
+		dealer.setDealerDrawCard(blackjack.draw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
+		// pointメソッドを実行し、戻り値をdealerpointにセットする。
+		dealer.setDealerPoint(blackjack.point(dealer.getDealerPoint(), dealer.getDealerHand()));
 		// ディーラーが引いたカードのメッセージを表示する
 		blackjack.drawMessage(dealer.getDealerName(), dealer.getDealerDrawCard());
 		// ディーラーが引いたカードの合計ポイントのメッセージを表示する
@@ -58,12 +58,13 @@ public class BlackJackMain {
 		blackjack.lineShow();
 
 
-		// isDrawメソッドを実行し、戻り値をdealerdrawcardにセットする。
-		dealer.setDealerDrawCard(blackjack.Draw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
-		// isPointメソッドを実行し、戻り値をdealerpointにセットする。
-		dealer.setDealerPoint(blackjack.Point(dealer.getDealerPoint(), dealer.getDealerHand()));
+		//drawメソッドを実行し、戻り値をdealerdrawcardにセットする。
+		dealer.setDealerDrawCard(blackjack.draw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
+		// pointメソッドを実行し、戻り値をdealerpointにセットする。
+		dealer.setDealerPoint(blackjack.point(dealer.getDealerPoint(), dealer.getDealerHand()));
 		// ディーラーが引いた2枚目のカードが非表示である旨を表示
 		dealer.dealerSecondMessage();
+		// ディーラーが引いたカードの合計ポイントを非表示の状態でメッセージを表示する
 		blackjack.pointShow(dealer.getDealerName(), dealer.getDealerHidden());
 		// 点線を表示
 		blackjack.lineShow();
@@ -75,16 +76,16 @@ public class BlackJackMain {
 		Scanner sc = new Scanner(System.in);
 		// 入力された文字列がｙである間繰り返す
 		while (sc.next().equals("y")) {
-			// isDrawメソッドを実行し、戻り値をplayerdrawcardにセットする。
-			player.setPlayerDrawCard(blackjack.Draw(player.getPlayerDrawCard(), player.getPlayerHand()));
-			// isPointメソッドを実行し、戻り値をplayerpointにセットする。
-			player.setPlayerPoint(blackjack.Point(player.getPlayerPoint(), player.getPlayerHand()));
+			// drawメソッドを実行し、戻り値をplayerdrawcardにセットする。
+			player.setPlayerDrawCard(blackjack.draw(player.getPlayerDrawCard(), player.getPlayerHand()));
+			// pointメソッドを実行し、戻り値をplayerpointにセットする。
+			player.setPlayerPoint(blackjack.point(player.getPlayerPoint(), player.getPlayerHand()));
 			// プレイヤーが引いたカードのメッセージを表示する
 			blackjack.drawMessage(player.getPlayerName(), player.getPlayerDrawCard());
 			// プレイヤーが引いたカードの合計ポイントのメッセージを表示する
 			blackjack.pointShow(player.getPlayerName(), Integer.toString(player.getPlayerPoint()));
 			// プレイヤーのポイントがバーストしていないか判定
-			blackjack.Burst(player.getPlayerPoint(), player.getPlayerName());
+			blackjack.burst(player.getPlayerPoint(), player.getPlayerName());
 			// 点線を表示
 			blackjack.lineShow();
 			// カードを引くかの選択するためのメッセージを表示
@@ -98,10 +99,10 @@ public class BlackJackMain {
 		while (dealer.getDealerPoint() < 17) {
 			// 点線を表示
 			blackjack.lineShow();
-			// isDrawメソッドを実行し、戻り値をdealerdrawcardにセットする。
-			dealer.setDealerDrawCard(blackjack.Draw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
-			// isPointメソッドを実行し、戻り値をdealerpointにセットする。
-			dealer.setDealerPoint(blackjack.Point(dealer.getDealerPoint(), dealer.getDealerHand()));
+			// drawメソッドを実行し、戻り値をdealerdrawcardにセットする。
+			dealer.setDealerDrawCard(blackjack.draw(dealer.getDealerDrawCard(), dealer.getDealerHand()));
+			// pointメソッドを実行し、戻り値をdealerpointにセットする。
+			dealer.setDealerPoint(blackjack.point(dealer.getDealerPoint(), dealer.getDealerHand()));
 			// プレイヤーが引いたカードのメッセージを表示する
 			blackjack.drawMessage(dealer.getDealerName(), dealer.getDealerDrawCard());
 			// プレイヤーが引いたカードの合計ポイントのメッセージを表示する
@@ -110,13 +111,14 @@ public class BlackJackMain {
 
 
 		// ディーラーのポイントがバーストしていないか判定
-		blackjack.Burst(dealer.getDealerPoint(), dealer.getDealerName());
+		blackjack.burst(dealer.getDealerPoint(), dealer.getDealerName());
 
 
 		// 点線の表示
 		blackjack.lineShow();
-		// ディーラーとプレイヤーのポイントを表示
+		//プレイヤーのポイントを表示
 		blackjack.pointShow(player.getPlayerName(),Integer.toString(player.getPlayerPoint()));
+		//ディーラーのポイントを表示
 		blackjack.pointShow(dealer.getDealerName(),Integer.toString(dealer.getDealerPoint()));
 		// 勝敗を判定する
 		blackjack.battleJudge(player.getPlayerName(), player.getPlayerPoint(), dealer.getDealerPoint());

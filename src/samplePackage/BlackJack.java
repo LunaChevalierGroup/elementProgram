@@ -14,12 +14,12 @@ public class BlackJack extends TrampBundleCreate {
 	 *
 	 * @author dfjkyrcq
 	 * @param drawcard
-	 *            引いたカードを代入する変数
+	 *            引いたカード
 	 * @param hand
-	 *            引いたカードを格納するList<Tramp>型の変数
+	 *            手札
 	 * @return 引いたカード
 	 */
-	public Tramp Draw(Tramp drawcard, List<Tramp> hand) {
+	public Tramp draw(Tramp drawcard, List<Tramp> hand) {
 		// トランプの束からトランプを取得し、Listから削除。取得したトランプを変数drawcardに代入
 		drawcard = getTrampBundle().remove(0);
 		// drawcardをList<Tramp>型のhandに追加する
@@ -32,12 +32,12 @@ public class BlackJack extends TrampBundleCreate {
 	 *
 	 * @author dfjkyrcq
 	 * @param point
-	 *            引いたトランプのポイントを代入する変数
+	 *            引いたトランプのポイント
 	 * @param hand
-	 *            引いたカードを格納するList<Tramp>型の変数
+	 *            手札
 	 * @return ポイント
 	 */
-	public int Point(int point, List<Tramp> hand) {
+	public int point(int point, List<Tramp> hand) {
 		// List<Tramp>型のhandから0番目の情報を取得し削除。トランプのポイントを取得し変数pointに代入
 		point += hand.remove(0).getTrampPoint();
 		return point;
@@ -54,7 +54,7 @@ public class BlackJack extends TrampBundleCreate {
 	 */
 	public void drawMessage(String humanname, Tramp drawcard) {
 		// 文字列の表示
-		System.out.println(humanname + "は" + drawcard.getTrampMark() + "の" + drawcard.getTrampNumber() + "を引きました");
+		System.out.println(humanname + "は" + drawcard.getTrampMark() + "の" + drawcard.getTrampNumberMark() + "を引きました");
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class BlackJack extends TrampBundleCreate {
 	 * @param humanname
 	 *            人の名前
 	 */
-	public void Burst(int point, String humanname) {
+	public void burst(int point, String humanname) {
 		// pointが21を超えているなら
 		if (point > 21) {
 			// 点線の表示
@@ -96,6 +96,8 @@ public class BlackJack extends TrampBundleCreate {
 	 * 勝敗判定メソッド
 	 *
 	 * @author dfjkyrcq
+	 * @param playername
+	 *            プレイヤーの名前
 	 * @param playerpoint
 	 *            プレイヤーの合計ポイント
 	 * @param dealerpoint
