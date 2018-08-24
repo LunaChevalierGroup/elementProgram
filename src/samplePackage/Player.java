@@ -11,7 +11,7 @@ import java.util.List;
  * @author dfjkyrcq
  */
 public class Player {
-	// List<Tramp>型の変数playerhandにArrayListクラスのインスタンスを生成
+	// List<Tramp>型の変数playerhandにArrayList<Tramp>クラスのインスタンスを生成
 	private List<Tramp> playerhand = new ArrayList<Tramp>();
 	// プレイヤーのポイントを代入する変数
 	private int playerpoint;
