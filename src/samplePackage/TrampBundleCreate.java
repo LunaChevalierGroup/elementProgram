@@ -24,7 +24,6 @@ public class TrampBundleCreate {
 	 * 変数trampbundleのセッタ
 	 *
 	 * @author dfjkyrcq
-	 *
 	 * @param trampbundle
 	 *            トランプの束
 	 */
@@ -36,7 +35,6 @@ public class TrampBundleCreate {
 	 * 変数trampbundleのゲッタ
 	 *
 	 * @author dfjkyrcq
-	 *
 	 * @return トランプの束
 	 */
 	public List<Tramp> getTrampBundle() {
@@ -51,15 +49,14 @@ public class TrampBundleCreate {
 	 *            tramppointの配列の要素
 	 * @param trampmark[j]
 	 *            trampmarkの配列の要素
-	 *
 	 */
 	public void trampBundleCreate() {
 		// 変数tramppointのlengthよりiが小さい間繰り返す
-		for (int i = 0; i < tramppoint.length; i++) {
+		for (int i = 0; i < this.tramppoint.length; i++) {
 			// 変数trampmarkのlengthよりjが小さい間繰り返す
-			for (int j = 0; j < trampmark.length; j++) {
+			for (int j = 0; j <this.trampmark.length; j++) {
 				// Trampクラスのインスタンスを生成し、引数としてtramppointとtrampmarkの配列の要素を渡す
-				Tramp tramp = new Tramp(tramppoint[i], trampmark[j]);
+				Tramp tramp = new Tramp(this.tramppoint[i], this.trampmark[j]);
 				// trampbundleにtrampを追加する
 				trampbundle.add(tramp);
 			}
@@ -71,7 +68,6 @@ public class TrampBundleCreate {
 	 * トランプ束をシャッフルするメソッド
 	 *
 	 * @author dfjkyrcq
-	 *
 	 */
 	public void trampShuffle() {
 		// trampbundleをシャッフルする

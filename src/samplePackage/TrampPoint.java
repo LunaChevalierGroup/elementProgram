@@ -6,7 +6,7 @@ package samplePackage;
  * @author dfjkyrcq
  */
 	public enum TrampPoint {
-	/** トランプのポイントと文字を列挙 */
+	/** トランプのポイントと英数字を列挙 */
      one(1,"A"),
      two(2,"2"),
      three(3,"3"),
@@ -41,7 +41,7 @@ package samplePackage;
 	}
 
 	/**
-	 * int型のpointを戻り値として返すメソッド
+	 * int型のpointのゲッタ
 	 *
 	 * @author dfjkyrcq
 	 * @return トランプのポイント
@@ -51,7 +51,7 @@ package samplePackage;
 	}
 
 	/**
-	 * String型のnumbermarkを戻り値として返すメソッド
+	 * String型のnumbermarkのゲッタ
 	 *
 	 * @author dfjkyrcq
 	 * @return トランプの英数字
