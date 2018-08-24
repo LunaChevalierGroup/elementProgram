@@ -21,6 +21,7 @@ public class Dealer {
 	private final String dealername = "Dealer";
 	// dealerhiddenをHiddenで初期化
 	private final String dealerhidden = "Hidden";
+
 	/**
 	 * dealerhandのセッタ
 	 *
@@ -59,7 +60,6 @@ public class Dealer {
 	 *
 	 * @author dfjkyrcq
 	 * @return ディーラーの手札
-	 *
 	 */
 	public List<Tramp> getDealerHand() {
 		return dealerhand;
@@ -70,7 +70,6 @@ public class Dealer {
 	 *
 	 * @author dfjkyrcq
 	 * @return ディーラーの合計ポイント
-	 *
 	 */
 	public int getDealerPoint() {
 		return dealerpoint;
@@ -81,7 +80,6 @@ public class Dealer {
 	 *
 	 * @author dfjkyrcq
 	 * @return ディーラーの引いたカード
-	 *
 	 */
 	public Tramp getDealerDrawCard() {
 		return dealerdrawcard;
@@ -92,7 +90,6 @@ public class Dealer {
 	 *
 	 * @author dfjkyrcq
 	 * @return ディーラーの名前
-	 *
 	 */
 	public String getDealerName() {
 		return dealername;
@@ -103,7 +100,6 @@ public class Dealer {
 	 *
 	 * @author dfjkyrcq
 	 * @return Hidden
-	 *
 	 */
 	public String getDealerHidden() {
 		return dealerhidden;
@@ -113,8 +109,6 @@ public class Dealer {
 	 * ディーラーが2枚目のカードを引いた時に表示する文字列
 	 *
 	 * @author dfjkyrcq
-	 *
-	 *
 	 */
 	public void dealerSecondMessage() {
 		// 文字列を表示
